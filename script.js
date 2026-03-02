@@ -20,7 +20,7 @@ async function fetchdata() {
         pokemonAttack.textContent=data.stats[1].base_stat;
         pokemonDefence.textContent = data.stats[2].base_stat;
         pokemonAbility.textContent = data.abilities[0].ability.name;
-        const imgSprint = data.sprites.front_default;
+        const imgSprint =data.sprites.other["official-artwork"].front_default ||data.sprites.front_default;
         const imgElement = document.getElementById("pokemon-sprint");
         imgElement.src = imgSprint;
         imgElement.style.display = "block"
