@@ -5,7 +5,17 @@ const pokemonHp=document.getElementById("poke-hp");
 const pokemonAttack=document.getElementById("poke-attack");
 const pokemonDefence=document.getElementById("poke-defense");
 const pokemonAbility=document.getElementById("poke-ability");
+// pokemon initial famous
+const charizard=document.querySelector(".charizard");
+const cont=0;
+charizard.addEventListener("onclick",()=>{
+    cont++;
+})
+if(cont==1){
+    pokemonName="charizard";
 
+    
+}
 async function fetchdata() {
     try {
         const pokemonName = document.querySelector(".pokemon-input").value.toLowerCase();

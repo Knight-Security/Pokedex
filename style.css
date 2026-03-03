@@ -115,7 +115,7 @@ body{
 .initial-view{
     height: 62vh;
     width:52vw  ;
-    background-color: red;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ img{
 .charizard,.pikachu,.squirtle,.bulbasaur,.gyarados,.arcanine{
     height: 22vh;
     width: 13vw;
-    border-radius: 12px;
+    border-radius: 35px;
     overflow: hidden;
 
 }
