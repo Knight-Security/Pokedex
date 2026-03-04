@@ -1,3 +1,4 @@
+const pokemonInput=document.querySelector(".pokemon-input");
 const pokemonSearch = document.querySelector(".pokemon-search");
 const pokemon_Name = document.getElementById("poke-name");
 const pokemonType=document.getElementById("poke-type");
@@ -33,11 +34,23 @@ async function fetchdata() {
         const imgSprint =data.sprites.other["official-artwork"].front_default ||data.sprites.front_default;
         const imgElement = document.getElementById("pokemon-sprint");
         imgElement.src = imgSprint;
-        imgElement.style.display = "block"
+        imgElement.style.display = "block";
+        pokemonSearch.style.backgroundImage = 'url("images/poki ball.png")';
+        pokemonSearch.style.backgroundSize = "cover";
+        pokemonSearch.style.backgroundPosition = "center";
+        pokemonSearch.style.backgroundRepeat = "no-repeat";
+
         
     }
     catch (error) {
         console.error(error)
     }
 }
-pokemonSearch.addEventListener("click", fetchdata)
+function click(){
+    pokemonSearch.style.backgroundImage = 'url(images/remove.photos-removed-background-removebg-preview.png)';
+    pokemonSearch.style.backgroundSize = "cover";
+    pokemonSearch.style.backgroundPosition = "center";
+    pokemonSearch.style.backgroundRepeat = "no-repeat";
+}
+pokemonSearch.addEventListener("click", fetchdata);
+pokemonInput.addEventListener("click",click);
