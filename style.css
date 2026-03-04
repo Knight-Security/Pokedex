@@ -50,6 +50,10 @@ body{
     font-size: 16px;
     outline: none;
     transition: 0.3s;
+    padding-left: 8px;
+}
+.pokemon-input::placeholder{
+    color:#bbbbbb;
 }
 .pokemon-search {
     height: 45px;
@@ -74,6 +78,7 @@ body{
 .pokemon-image{
     height:46vh;
     width:25vw;
+    /* used to naviagte pokemon background */
     background-color: red;
     justify-content: center;
     align-items: center;
@@ -105,18 +110,19 @@ body{
     width: 40%;
 }
 #pokemon-sprint{
-    display:none;
+    display:flex;
     height: 100%;
     width: 100%;
 }
 .change{
-    display: none;
+    display: flex;
+    gap: 50px;
 }
 .initial-view{
     height: 62vh;
     width:52vw  ;
     background-color: transparent;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
