@@ -115,14 +115,14 @@ body{
     width: 100%;
 }
 .change{
-    display: flex;
+    display: none;
     gap: 50px;
 }
 .initial-view{
     height: 62vh;
     width:52vw  ;
     background-color: transparent;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
