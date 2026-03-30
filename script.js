@@ -39,7 +39,6 @@ async function fetchdata() {
         pokemonAttack.textContent = data.stats[1].base_stat;
         pokemonDefence.textContent = data.stats[2].base_stat;
         pokemonAbility.textContent = data.abilities[0].ability.name;
-
         const imgSprint =data.sprites.other["official-artwork"].front_default ||data.sprites.front_default;
         const imgElement = document.getElementById("pokemon-sprint");
         imgElement.src = imgSprint;
@@ -56,11 +55,29 @@ pokemonSearch.addEventListener("click", fetchdata);
 pokemonInput.addEventListener("click", changeImage);
 
 function changeImage() {
-    pokemonSearch.style.backgroundImage ='url("images/remove.photos-removed-background-removebg-preview.png")';
+    pokemonSearch.style.backgroundImage ='url("images/remove.photos-removed-background.png")';
 }
-pokemonCarizard.addEventListener("click", () => selectPokemon("charizard"));
-pokemonPikachu.addEventListener("click", () => selectPokemon("pikachu"));
-pokemonSquirtle.addEventListener("click", () => selectPokemon("squirtle"));
-pokemonBulbasaur.addEventListener("click", () => selectPokemon("bulbasaur"));
-pokemonGyarados.addEventListener("click", () => selectPokemon("gyarados"));
-pokemonArcanine.addEventListener("click", () => selectPokemon("arcanine"));
+pokemonCarizard.addEventListener("click", () => {
+    selectPokemon("charizard");
+    changeImage();
+});
+pokemonPikachu.addEventListener("click", () => {
+    selectPokemon("pikachu"); 
+    changeImage();
+});
+pokemonSquirtle.addEventListener("click", () => {
+    selectPokemon("squirtle");
+    changeImage();
+});
+pokemonBulbasaur.addEventListener("click", () => {
+    selectPokemon("bulbasaur");
+    changeImage();
+});
+pokemonGyarados.addEventListener("click", () => {
+    selectPokemon("gyarados");
+    changeImage();
+});
+pokemonArcanine.addEventListener("click", () => {
+    selectPokemon("arcanine");
+    changeImage();
+});
